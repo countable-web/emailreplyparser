@@ -155,6 +155,12 @@ exports.test_parse_out_sent_from_iPhone2 = function(test){
     test.done();
 };
 
+exports.test_parse_out_sent_from_iPhone3 = function(test){
+    var body = get_raw_email('email_iPhone3');
+    test.equal('Here is another email', EmailReplyParser.parse(body));
+    test.done();
+};
+
 exports.test_parse_out_sent_from_BlackBerry = function(test){
     var body = get_raw_email('email_BlackBerry');
     test.equal('Here is another email', EmailReplyParser.parse(body));
